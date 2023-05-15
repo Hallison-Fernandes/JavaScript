@@ -1,13 +1,19 @@
 function gerar() {
     let num = document.querySelector('input#num')
-    let tab = document.querySelector('div#tabela')
+    let tab = document.querySelector('select#tabela')
     //alert(Number(num.value))
 
-    if (Number(num.value.length) === 0) {
+    if (num.value.length == 0) {
         alert('[ERRO] Digite um número')
     } else {
+        let n = Number(num.value)
+        tab.innerHTML = ''
         for (let r = 1; r <= 10; r++) {
-            tab.innerHTML += `${Number(num.value) } X ${r} = ${Number(num.value) * r} <br>`
+            let item = document.createElement('option')
+            item.text = `${n} x ${r} = ${n*r}`
+            item.value = `tab${r}`
+            tab.appendChild(item)
+            
         }
     }
 }
