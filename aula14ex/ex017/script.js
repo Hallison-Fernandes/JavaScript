@@ -6,7 +6,7 @@ function gerar() {
     if (Number(num.value.length) === 0) {
         alert('[ERRO] Digite um número')
     } else {
-        for (let r = 1; r = 10; r++) {
+        for (let r = 1; r <= 10; r++) {
             tab.innerHTML += `${Number(num.value) } X ${r} = ${Number(num.value) * r} <br>`
         }
     }
